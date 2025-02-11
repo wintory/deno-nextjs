@@ -21,14 +21,14 @@ export default function Home() {
         <div className="grid grid-cols-2 gap-4 md:grid-cols-4">
           {dinosaurs.map((dinosaur: any) => {
             return (
-              <div
+              <Link
                 key={dinosaur.name}
-                className="cursor-pointer rounded-md bg-gray-100 p-4 text-center text-black hover:bg-transparent hover:text-white"
+                href={`/${dinosaur.name.toLowerCase()}`}
               >
-                <Link href={`/${dinosaur.name.toLowerCase()}`}>
+                <div className="cursor-pointer rounded-md bg-gray-100 p-4 text-center text-black hover:border hover:border-white hover:bg-transparent hover:text-white">
                   {dinosaur.name}
-                </Link>
-              </div>
+                </div>
+              </Link>
             )
           })}
         </div>

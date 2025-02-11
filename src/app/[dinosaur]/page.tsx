@@ -23,9 +23,12 @@ export default function Dinosaur({ params }: RouteParams) {
     <main className="flex flex-col items-center gap-8 p-8 pb-20 font-[family-name:var(--font-geist-sans)]">
       <h1>{dinosaur.name}</h1>
       <p>{dinosaur.description}</p>
-      <div className="cursor-pointer rounded-md bg-gray-100 p-4 text-black">
-        <Link href="/">Back to all dinosaurs</Link>
-      </div>
+
+      <Link href="/">
+        <div className="cursor-pointer rounded-md bg-gray-100 p-4 text-black">
+          Back to all dinosaurs
+        </div>
+      </Link>
     </main>
   )
 }
